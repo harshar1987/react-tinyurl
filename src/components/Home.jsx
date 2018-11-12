@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { UrlShortenService } from "../lib/services/urlShortnerService";
+import { UrlShortenService } from "../lib/services/UrlShortnerService";
 
-import "../styles/site.css";
-import "../styles/vendors/grid.css";
 
 const Container = styled.div`
     position: relative;
     width: 800px;
     height: 200px;
     background: #eadada;
+    margin: 10px;
 `;
 
 class Home extends Component {
@@ -48,8 +47,8 @@ class Home extends Component {
                     onChange={e => this.setState({ url: e.target.value })}
                 />
                 <button style={{ margin: "5px", width: "35px", borderRadius: "5px", color: "black" }} onClick={this.createShortenUrl}>Go</button>
-
-                <div>Short Url: <a href={link}>{this.state.shortUrl}</a></div>
+                {this.state.shortUrl === "" ? <div></div> : <div>Short Url: <a href={link}>{this.state.shortUrl}</a></div> }
+                
             </div>
 
         </Container>);

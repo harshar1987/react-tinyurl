@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import { UrlShortenService } from "../lib/services/urlShortnerService";
+import { UrlShortenService } from "../lib/services/UrlShortnerService";
 
 export class RedirectUrl extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     async componentDidMount() {
         /*eslint-disable*/

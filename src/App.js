@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import { ErrorBoundary } from "./common/ErrorBoundary";
-import {RedirectUrl} from "./RedirectUrl";
+import Home from "./components/Home";
+import { ErrorBoundary } from "./components/common/ErrorBoundary";
+import {RedirectUrl} from "./components/RedirectUrl";
 
 const App = () =>
     (<ErrorBoundary>
