@@ -27,8 +27,7 @@ class Home extends Component {
         let response = await UrlShortenService.shortenUrl(this.state.url);
 
         const host = window.location.hostname;
-        const port = host.concat(":",window.location.port);
-        const tinyUrl = port.concat("/", response);
+        const tinyUrl = host.concat("/", response);
         this.setState({ shortUrl: tinyUrl });
         this.forceUpdate();
     }
